@@ -7,7 +7,7 @@
 
 # Site settings
 title: 滑稽兔的技术博客
-brief-intro: Android and Python Coder
+brief-intro: PHP and Python Coder
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://j1109053660.github.io" # the base hostname & protocol for your site
 
