@@ -22,7 +22,7 @@ date:  2019-10-13 20:39:11
 
 1. 打开```C:\Windows\System32\drivers\etc\hosts```文本。
 
-![Snipaste_2019-10-13_20-21-2593f64.png](https://miao.su/images/2019/10/13/Snipaste_2019-10-13_20-21-2593f64.png)
+![Snipaste_2019-10-13_20-23-181cd10.png](https://miao.su/images/2019/10/13/Snipaste_2019-10-13_20-23-181cd10.png)
 
 2. 在最后添加信息```127.0.0.1	qwq.top```保存
 
@@ -30,7 +30,7 @@ date:  2019-10-13 20:39:11
 
 4. 查找```vhosts```大约在470行取消前面的#
 
-![Snipaste_2019-10-13_20-23-181cd10.png](https://miao.su/images/2019/10/13/Snipaste_2019-10-13_20-23-181cd10.png)
+![Snipaste_2019-10-13_20-21-2593f64.png](https://miao.su/images/2019/10/13/Snipaste_2019-10-13_20-21-2593f64.png)
 
 5. 打开```D:\phpStudy\Apache\conf\extra\httpd-vhosts.conf```文本
 
