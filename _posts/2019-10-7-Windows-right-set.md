@@ -32,7 +32,7 @@ date:  2019-10-7 20:11:30
 
 选择第一项"HKEY_CLASSES_ROOT",点开。
 
-[![Snipaste_2019-10-07_15-39-589555e.png](https://miao.su/images/2019/10/07/Snipaste_2019-10-07_15-39-589555e.png)](https://miao.su/image/ik4xQ)
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191025191838.png)
 
 ### 2. 新建项
 
@@ -43,14 +43,21 @@ date:  2019-10-7 20:11:30
 
 
 
-[![Snipaste_2019-10-07_17-20-44ac2bf.png](https://miao.su/images/2019/10/07/Snipaste_2019-10-07_17-20-44ac2bf.png)](https://miao.su/image/ik9Bz)
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191025191923.png)
+
+
 
 ### 3. 新建字符串值
 
+
+
 选中刚才新建的项，“右键”，“新建”->“字符串值”
-[![Snipaste_2019-10-07_17-21-01f2742.png](https://miao.su/images/2019/10/07/Snipaste_2019-10-07_17-21-01f2742.png)](https://miao.su/image/ikK2H)
+
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191025191947.png)
+
+
 
 至此，设置完毕。关闭注册表编辑器。
 在当前界面，“右键”->“新建”，可以看到"Markdown File" 选项了。
 
-[![Snipaste_2019-10-07_17-21-4950200.png](https://miao.su/images/2019/10/07/Snipaste_2019-10-07_17-21-4950200.png)](https://miao.su/image/ikrrb)
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191025192041.png)
