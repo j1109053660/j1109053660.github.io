@@ -11,7 +11,8 @@ type: page
 
 ## 关于我
 
-<iframe src="https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191024181303.jpg" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+<img src="https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191024181303.jpg" width = "100" height = "100" div align=left />
+
 咳咳(⊙o⊙)？偶是一个，全栈工程师，花名滑稽。
 
 主要兴趣集中在后端开发，大后台的概念深入我心。将更多的业务逻辑放在后端中，这很有趣。同时，将自己构想的内容实现出来，这种感觉很愉快。
