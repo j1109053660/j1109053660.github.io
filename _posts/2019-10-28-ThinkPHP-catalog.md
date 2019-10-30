@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ThinkPHP-day2"
+title:  "ThinkPHP-目录"
 categories: PHP
 author: 滑稽兔啊
 tags:  ThinkPHP
@@ -10,6 +10,20 @@ date:  2019-10-28 21:13:45
 # 目录结构
 
 > ThinkPHP5.0的目录
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```html
 project  应用部署目录
