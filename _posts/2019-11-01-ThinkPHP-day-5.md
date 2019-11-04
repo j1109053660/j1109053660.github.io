@@ -21,8 +21,8 @@ date:  2019-11-01 14:50:21
 
 
 
-
-
+* content
+{:toc}
 **接收请求参数**
 
 静态调用》$request = Request::instane(); //use think\Request;
