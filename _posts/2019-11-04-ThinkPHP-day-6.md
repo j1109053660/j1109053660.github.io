@@ -58,16 +58,45 @@ QQ：8000(服务端)和4000端口(客户端)<br>
 	3. R-读取|find,select <br>
 	4. D-删除|delete <br>
 
-##基础的sql语句
+## 基础的sql语句
+
+```
+public function db(){
+//基本的sql语句
+$sql = "select * from 表名";
+$result = \think\Db::query($sql);
+}
+```
+
+配置了数据库链接信息后可以直接使用数据运行原生SQL操作，<br>
+支持 ```query``` (查询操作) 和 ```execute``` （写入操作）支持参数绑定
+
+**参数绑定**
+
+```
+Db::query('select * from think_user where id=?',[8]);
+Db::execute('insert into think_user (id, name) values (?, ?)',[8,'thinkphp']);
+```
+**命名占位符绑定**
+
+```
+Db::query('select * from think_user where id=:id',['id'=>8]);
+Db::execute('insert into think_user (id, name) values (:id, :name)',['id'=>8,'name'=>'thinkphp']);
+```
+
+**多个数据库连接**
+
+```
+Db::connect($config)->query('select * from think_user where id=:id',['id'=>8]);
+```
 
 
-
-##查询构造器##
+## 查询构造器
 
 - 链式操作作用是生成标准的严谨sql语句
 - 所有的连贯操作都返回当前的模型实力对象（this）其中带*标识的表示支持多次调用
 
-```php+HTML
+```
         $result =Db::table('ecm_user')
             ->field('id')
             ->field('uname')
@@ -79,7 +108,7 @@ QQ：8000(服务端)和4000端口(客户端)<br>
 
 【链式操作1】table，指定查询的表，直接写完整的表明：如果需要别名一般陪着alias来使用或者直接空格+别名。
 
-```php+HTML
+```
 $result=Db::table('ecm_users')->select();
 $result=Db::table('ecm_users a')->select();//起别名
 $result=Db::table('ecm_users')->alias('a')->select();
@@ -100,7 +129,7 @@ $result=Db::table('__USERS__')->select();//表前缀与系统默认的相同时�
 >	6. 排除默认写占用资源高的字段或者根据要求显示一部分字段但不显示的占少数，可以考虑使用field('排除的字段',true)<br>
 >	7.字段上可以使用SQL函数<br>
 
-```php+HTML
+```
 $result=Db::table('ecm_users')->field('id,uname,email')->select();
 $result=Db::table('ecm_users')->field('id','uname','tel')->select();
 $result=Db::table('ecm_users')->field(true)->select();
@@ -127,10 +156,36 @@ $result=Db::table('ecm_goods')
 
 
 
+## 实例化
+
+> 详情[小豆丁博客]( https://www.cnblogs.com/xiaodouding/p/6801170.html )介绍
+
+> 什么是实例化
 
 
+## 实例化本身
 
+```
+public static function instance($options = [])
+{
+	if(is_null(self::$instance)){
+		self::$instance = new static($options);
+	}
+	return self::$instance;
+}
+```
+> static方法实例化本身
 
 -----
+
+## 实例化对象M()和D()的区别
+
+> 参考
+
+[ThinkPHP中实例化对象M()和D()的区别](https://www.cnblogs.com/geniusxjq/p/4137002.html)
+
+
+
+------
 
 ![](https://f.sinaimg.cn/tech/transform/98/w640h258/20191104/13f8-ihuuxuu5583284.gif)
