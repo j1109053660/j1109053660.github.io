@@ -127,12 +127,6 @@ $result=Db::table('ecm_goods')
 
 
 
------
-
-​			>>END
-
-![](https://n.sinaimg.cn/tech/transform/737/w400h337/20191106/0a22-ihyxcrp8739915.gif)
-
 
 
 
