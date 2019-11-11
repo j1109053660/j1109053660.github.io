@@ -25,13 +25,14 @@ date:  2019-11-08 16:08:10
 查询构造器分为：链式操作，查询语言
 
 
-![](C:\Users\o.o\Desktop\Snipaste_2019-11-08_17-45-58.png)
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191111090904.png)
 
 
 
 ## 【高级查询技巧】获取SQL语句
 
-报错信息![Snipaste_2019-11-08_14-28-51](C:\Users\o.o\Desktop\Snipaste_2019-11-08_14-28-51.png)
+报错信息
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191111090830.png)
 
 解决办法：添加fetchSql(true)
 > 返回的是sql语句（字符串）
@@ -181,7 +182,8 @@ $result=Db::table('ecm_goods')
 
 
 
-- 根据字段的值查询记录（仅一条记录，默认排序规则的第一条），`-> getByFieldName(值)` 返回值为一维数组|NULL 相当于find方法
+- 根据字段的值查询记录（仅一条记录，默认排序规则的第一条），
+- `-> getByFieldName(值)` 返回值为一维数组|NULL 相当于find方法
 
 
 ```
@@ -192,7 +194,8 @@ $result=Db::table('ecm_goods')
 ```
 
 
-- 根据字段的值查询某个字段的值（仅一条记录，默认排序规则的第一条），`-> getFieldByFieldName(值,字段名)` 返回值为字符串|整型|NULL 相当于find方法
+- 根据字段的值查询某个字段的值（仅一条记录，默认排序规则的第一条），
+- `-> getFieldByFieldName(值,字段名)` 返回值为字符串|整型|NULL 相当于find方法
 
 ```
 $result=Db::table('ecm_goods')
