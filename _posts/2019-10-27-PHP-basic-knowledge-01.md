@@ -149,15 +149,36 @@ public function __destruct(){}
 方法9. __sleep(序列化对象时自动执行)
 方法10. __wakeup(反序列化时自动执行)
 方法11. __call(调用不存在的方法时自动执行，两个参数1.不存在的方法名2.传入的参数-数组)
+方法12. __callStatic(用静态方式中调用一个不可访问方式时调用)
+方法13. __autoload(尝试加载未定义的类)
+方法14. __invoke(调用函数的方式调用一个对象时的回应方法)
+方法15. __set_state(调用var_export()导出类时，此静态方法会被调用)
+方法16. __debugInfo(打印所需调试信息)
 ```
+> 构造方法在new的时候自动执行，设置了形参要在new的同时传入实参
+> 栗子：
+> public function __construct($name,$age,$sex){....}
+> $zh=new 类名('小张','18','男')
+<hr style="color:gray;">
+
+> 析构方法在对象被销毁之前执行的方法（不可传参）
+> 如果没有手动销毁，则在页面执行之后执行
+> 栗子：
+> public function __destruct(){echo "<hr>";}
+> 如果没有unset()销毁对象，那么这个分隔符永远在页面最下面
+
 ->  对像的连接符号
 => 数组的连接符号
 
 self 用来调用静态属性和方法
 :: 范围解析操作符 用来调用静态属性和静态属性方法
 
+serialize()方法通过序列化表单值，创建URL编码文本字符串
 
-serialize();
+
+JSON的一般写法：
+{name:'xiaozhang',age:'18'}
+或者
 O:6:"Person":{s:3:"sex";s:3:"男"；}
 
 ## 九.类的三大特性
