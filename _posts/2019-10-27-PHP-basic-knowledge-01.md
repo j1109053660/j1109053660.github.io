@@ -135,7 +135,7 @@ private私有的,类的外部无法使用，不能被继承<br>
 
 ```
 16种魔术方法（方法必须是public function）
-构造方法1. __construct (多形参)new的时候自动执行
+构造方法1. __construct (自定义形参)new的时候自动执行
 public function __construct($参数1，$参数2...){}
 析构方法2. __destruct(无形参)对象被销毁之前自动执行
 public function __destruct(){}	
@@ -144,10 +144,10 @@ public function __destruct(){}
 方法4. __get(一个形参，1.属性名)类的外部对不可调用的属性取值时自动执行
 方法5. __isset(一个形参,1.属性名)类的外部判断不可调用的属性是否存在时自动执行
 方法6. __unset(一个形参,1.属性名)类的外部销毁不可调用的属性时自动执行
-方法7. __toString(当你把对象当成字符串去使用时自动执行)
+方法7. __toString(无形参)把对象当成字符串去使用时自动执行
 方法8. __clone(无形参)在对象被克隆时自动执行
-方法9. __sleep(序列化对象时自动执行)
-方法10. __wakeup(反序列化时自动执行)
+方法9. __sleep(无形参)序列化对象时自动执行
+方法10. __wakeup(无形参)反序列化对象时自动执行
 方法11. __call(两个形参1.不存在的方法名2.传入的参数[数组])调用不存在的方法时自动执行
 方法12. __callStatic(用静态方式中调用一个不可访问方式时调用)
 方法13. __autoload(尝试加载未定义的类)
@@ -166,7 +166,31 @@ public function __destruct(){}
 > 栗子：<br>
 > public function __destruct(){echo "<hr>";}<br>
 > 如果没有unset()销毁对象，那么这个分隔符永远在页面最下面<br>
+<hr style="color:gray;"><br>
 
+>序列化：将复杂类型的数据按照一定的规则转换成字符串的方法<br>
+>栗子：<br>
+>//数组<br>
+>$arr=['name'=>'京东','sex'=>'男'];<br>
+>$str=serialize($arr);//序列化<br>
+>echo $str;<br>
+>结果：<br>
+>
+>> a:2:{s:4:"name";s:9:"京东";s:3:"sex";s:3:"男";}
+
+>//对象<br>
+>$xx=new Test("京东");<br>
+>$xx->name="张小龙";<br>
+>$str=serialize($xx);<br>
+>echo $str;<br>
+>结果：<br>
+>
+>>O:4:"Test":3:{s:4:"name";s:9:"张小龙";s:6:"*sex";s:3:"女";}
+
+>反序列化：将序列话后的数据还原<br>
+>1.$arr2=unserialize($str);//数组序列化反序列化<br>
+>2.$xx=unserialize($srt);//对象序列化反序列化<br>
+<hr style="color:gray;"><br>
 ->  对像的连接符号
 => 数组的连接符号
 
