@@ -44,7 +44,8 @@ $ 结束 只能写在最后面
 test(字符串) 返回true/false
 match(正则) 返回数字/null
 ```
-<span style="color:blue;">常用正则：</span>
+<span style="color:blue;">常用正则：</span><br>
+
 |名称|正则|
 |--:|--|
 |手机号正则：|/^1[3-9]\d{9}$/|
