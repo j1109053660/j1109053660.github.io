@@ -158,6 +158,51 @@ return 直接将值返回出来，并停止程序。echo直接显示程序还可
 
 
 
+18.虚拟域名
+
+```
+为了安全，让用户只能访问public文件夹
+项目部署到其他位置时不出问题
+服务器的内容与本地环境一模一样
+```
+
+
+
+19.控制器
+
+```
+控制器名：根据业务流程起名（见明知意）
+控制器的类：类名与控制器名一致，首字母大写，采用大驼峰式命名
+```
+
+
+
+20.`common.php`应用公共文件使用函数的方法
+
+>common.php
+
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191218174929.png)
+>User.php
+
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191218174940.png)
+
+
+
+
+21.大写转小写+下划线
+
+```
+首字母转小写，后面的大写字母转小写并在前面加下划线
+视图层的文件夹名根据控制器名来建立
+视图层的模板文件名根据相应控制器的方法来建立
+```
+
+> 栗子：
+> `地址栏` http://tp18.com/index.php/GoodsInfo/showMsg
+> 模板文件不存在：D:\../public/../application/index\view\goods_info\show_msg.html
+
+
+
 
 ## 常见的框架：
 
