@@ -58,6 +58,14 @@ date:  2019-10-31 16:03:40
 
 > 5.0还支持{$name.aa ?? 'xxxx'}
 
+
+
+
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191223110030.png)
+
+
+
+
 第一种情况：``` ？：```
 ```html+php
 <{$status? '正常';'错误'}>
