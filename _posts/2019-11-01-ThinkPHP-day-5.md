@@ -23,10 +23,14 @@ date:  2019-11-01 14:50:21
 
 * content
 {:toc}
+
 **接收请求参数**
 
-静态调用》$request = Request::instane(); //use think\Request;
+静态调用》$request = Request::instance(); //use think\Request;
 助手函数》$request=request();
+
+> Request::instance();//单例的设计模式，始终保证内存中只有一个类的实例化对象；
+
 
 **获取请求参数**
 
@@ -86,11 +90,17 @@ $this->assign('name','zhuoxiang');
 
 
 
+**使用PHP函数对变量进行比较**
+
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191224134304.png)
+
+
+
 -----
 
-> sql注释
-> 在索引栏中输入一下代码：
->select * from user where username='admin' or 1=1;--' and upwd='123456';//--注释后面的代码将屏蔽掉不在执行。
+> sql注释 <br>
+> 在索引栏中输入一下代码：<br>
+>select * from user where username='admin' or 1=1;--' and upwd='123456';//--注释后面的代码将屏蔽掉不在执行。<br>
 >select * from user where username='admin' or 1=1;drop 表名//删除表
 
 -----

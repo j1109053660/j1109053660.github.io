@@ -85,7 +85,9 @@ new \stdClass();
 //斜杆的意思是前面没有任何别名
 ```
 
+11.控制器的职责
 
+![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191224133147.png)
 
 ## 第二部分：代码
 
