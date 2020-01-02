@@ -94,7 +94,7 @@ Db::connect($config)->query('select * from think_user where id=:id',['id'=>8]);
 ## 查询构造器
 
 - 链式操作作用是生成标准的严谨sql语句
-- 所有的连贯操作都返回当前的模型实力对象（this）其中带*标识的表示支持多次调用
+- 所有的连贯操作都返回当前的模型实例对象（this）其中带*标识的表示支持多次调用
 
 ```
         $result =Db::table('ecm_user')

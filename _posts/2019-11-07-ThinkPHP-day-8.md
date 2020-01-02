@@ -21,6 +21,26 @@ date:  2019-11-07 11:45:10
 {:toc}
 
 
+## 数据库操作
+![](C:\Users\o.o\Desktop\Snipaste_2019-12-31_09-11-55.png)
+
+### 查询语言的2个方法，3个用法，8个要诀
+**两个方法：**where,whereOr<br>
+**三个用法：**表达式查询，数组查询，闭包查询<br>
+**八个要诀：**<br>
+•查询条件的调用次序就是生成SQL的条件顺序；<br>
+•查询字段用&分割表示对多个字段使用AND查询；<br>
+•查询字段用|分割表示对多个字段使用OR查询；<br>
+•对同一个查询字段多次调用非等查询条件会合并查询；<br>
+•闭包查询和EXP查询会在生成的查询语句两边加上括号；<br>
+•用闭包查询替代3.2版本的组合查询；<br>
+•除了EXP查询外，其它查询都会自动使用参数绑定；<br>
+•如果查询条件来自用户输入，尽量使用表达式和闭包查询，数组条件查询务必使用官方推荐的方法获取变量；<br>
+
+
+
+
+
 ## 【查询构造器】查询语句：表达式查询
 
 表达式查询，三个参数，其中如果是等于的条件，可以省略等于的条件直接写两个参数
@@ -28,16 +48,25 @@ date:  2019-11-07 11:45:10
 ```
 $result=Db::table('ecm_goods')
 	->field(true)
+	//->whereOr('goods_name','like','%thinkphp%')
+	//->where('goods_id','>',1)
+    //->where('goods_id','<',10)
+    //->where('goods_id','<>',10)
+    //->where('goods_id','between',[1,5])
+    // ->where('goods_id','in','1,2,3,4,5')
+    // ->where('goods_id','in',[1,2,3,4,5])
+    //->where('goods_id',null)
 	->where('descriptopn','null','')//select * from 'ecm_goods' where 'descriptopn' is null
 	->where('descriptopn','')// 'descriptopn' = ''
 	//特殊表达式
 	//->where("left(goods_name,2)='杰记'",'exp','')//expression  引号内可以写原生表达式 ，left是从左截取
+	//exp-表达式查询。原生的sql可以写在前面的参数或者后面的参数，唯一不能做的就是拆开写。
 	->select();
 ```
 
 ```
-$result=Db:table('ecm_users')->where('add_time','> time',13570128000)-select();
-$result=Db:table('ecm_users')->where('add_time','> time','2015/11/12')-select();
+$result=Db:table('ecm_users')->where('add_time','> time',13570128000)->select();
+$result=Db:table('ecm_users')->where('add_time','> time','2015/11/12')->select();
 ```
 
 

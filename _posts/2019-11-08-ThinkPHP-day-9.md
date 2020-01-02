@@ -31,6 +31,10 @@ date:  2019-11-08 16:08:10
 
 ## 【高级查询技巧】获取SQL语句
 
+
+
+【返回SQL语句】属于链式操作的一种；返回要执行的SQL语句，一般用于调试SQL语句
+
 报错信息
 ![](https://j1109053660.oss-cn-hangzhou.aliyuncs.com/img/20191111090830.png)
 
@@ -55,13 +59,18 @@ $result=Db::table('ecm_users')
 
 ## 【高级查询技巧】*聚合查询
 
+【聚合查询】每个方法对应的原生SQL都会自动加上limit 1；查询字段都会自动起别名CONUNT(*) as tp_count
+
 五个函数：sum,avg,count,min,max 	=>	limit 1
+
+
+
 > 返回的是字符串
 
 ```
 //参数可选的方式，不写参数为count(*)
 $result=Db::table('ecm_goods')->field(true)->count();
-// SELECT COUNT(*) AS tp_count FROM `ecm_goods` LIMIT
+// SELECT COUNT(*) AS tp_count FROM `ecm_goods` LIMIT 1
 //参数可选的方法，写参数count(id)
 $result=Db::table('ecm_goods')->field(true)->count('goods_id');
 // SELECT COUNT(*) AS tp_count FROM `ecm_goods` LIMIT 1
@@ -173,7 +182,11 @@ $result=Db::table('ecm_goods')
 
 ## 【高级查询技巧】动态查询
 
-查询方法不是链式操作，要做为每次查询的最后一次调用的方法来使用,查询条件都是值等“=”
+查询方法不是链式操作，要做为每次查询的最后一次调用的方法来使用,查询条件都是值等“=” <br>
+
+` getBy+FieldName() `,将要查询的字段转成驼峰法来写；根据某个字段里的值查询一条数据 <br>
+
+` getFieldBy+FieldName() `,返回一个字段里的值，根据一个字段的值查询另一个字段的值；默认排序的第一条的对应字段 <br>
 
 |动态查询|描述|
 |--|--|

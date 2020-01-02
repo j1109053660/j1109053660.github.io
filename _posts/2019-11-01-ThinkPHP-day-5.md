@@ -41,10 +41,10 @@ date:  2019-11-01 14:50:21
 参数2：变量名，可选，如果写，可以直接接到对应参数的值，不写为获取全部参数的数组，相当于$_GET  $_POST；
 </span>
 
-```html
-$param=$request->param('');
-$get=$request->get();
-//指定参数接值或者不指定参数接值
+```
+$param=$request->param('');<br>
+$get=$request->get();<br>
+//指定参数接值或者不指定参数接值<br>
 ```
 <span style="color:#B1173C;font-weight:bold;">
 参数3：变量修饰符，对接收的变量进行强制的类型转换，复选框命名要加[]并且接收参需要加/a进行强制类型转换
@@ -74,17 +74,17 @@ $get=$request->get();
 >htmlspecialchars(特殊字符转义)
 >strip_tags(滤掉NUL，HTML和PHP的标签)
 
-```php+HTML
-<!--参考代码-->
-$param = $request->param();
-$get   = $request->get();
-$post  = $request->post();
-$id    = $request->param('id/d','1');//参数是否传值
-$ids   = $request->get('ids',2);//参数是否存在
-$vip   = $request->post('vip/a',[22]);//复选框特殊
-$username  = $request-post('username','default','trim,htmlspecialchars,strip_tags');//参数是否存在
-$usernamee = $request->post('username','default','md5');//参数是否存在
-// 赋值到模版
+```
+<!--参考代码--><br>
+$param = $request->param();<br>
+$get   = $request->get();<br>
+$post  = $request->post();<br>
+$id    = $request->param('id/d','1');//参数是否传值<br>
+$ids   = $request->get('ids',2);//参数是否存在<br>
+$vip   = $request->post('vip/a',[22]);//复选框特殊<br>
+$username  = $request-post('username','default','trim,htmlspecialchars,strip_tags');//参数是否存在<br>
+$usernamee = $request->post('username','default','md5');//参数是否存在<br>
+// 赋值到模版<br>
 $this->assign('name','zhuoxiang');
 ```
 
